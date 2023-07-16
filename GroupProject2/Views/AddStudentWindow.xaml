@@ -1,0 +1,130 @@
+﻿<Window x:Class="GroupProject2.Views.AddStudentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GroupProject2.Views" xmlns:Icon="clr-namespace:MahApps.Metro.IconPacks;assembly=MahApps.Metro.IconPacks.Material"
+        xmlns:local1="clr-namespace:GroupProject2.ViewModels"
+        mc:Ignorable="d"
+        Title="AddStudentWindow" Height="600" Width="400"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <local1:AddStudentWindowVM/>
+    </Window.DataContext>
+    <Grid>
+        <Border>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0 0" EndPoint="1 1">
+                    <GradientStop Color="#F39C12" Offset="0"/>
+                    <GradientStop Color="#F5B041" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <StackPanel>
+                <Grid>
+                    <StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="330"/>
+                                <ColumnDefinition Width="70"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="0">
+                                <TextBlock Text="Add Student" Style="{StaticResource titleText}"/>
+
+                            </Border>
+                            <Border Grid.Column="1">
+                                <Button Style="{StaticResource circleButton}" >
+                                    <Icon:PackIconMaterial Name="closeicon" Kind="Close" Height="30" Width="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Button>
+                            </Border>
+                            
+
+
+                        </Grid>
+                        <Border Height="5" Background="White"/>
+                        <StackPanel>
+                            <TextBlock Text="First Name" Style="{StaticResource textblockcaption}" />
+                            <Border BorderThickness="1" BorderBrush="White" Margin="15 2 15 0" CornerRadius="5">
+                                <Grid Margin="7 5">
+                                    <TextBlock x:Name="textFirstName"  Text="first name" MouseDown="textFirstName_MouseDown" VerticalAlignment="Center"
+                                    Style="{StaticResource textHint}"/>
+                                    <TextBox x:Name="txtFirstName" Text="{Binding FirstName}" TextChanged="txtFirstName_TextChanged"  Style="{StaticResource textBox1}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Text="Last Name" Style="{StaticResource textblockcaption}" />
+                            <Border BorderThickness="1" BorderBrush="White" Margin="15 2 15 0" CornerRadius="5">
+                                <Grid Margin="7 5">
+                                    <TextBlock x:Name="textLastName"  Text="last name" MouseDown="textLastName_MouseDown" VerticalAlignment="Center"
+                                    Style="{StaticResource textHint}"/>
+                                    <TextBox x:Name="txtLastName" Text="{Binding LastName}" TextChanged="txtLastName_TextChanged"  Style="{StaticResource textBox1}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Text="Age" Style="{StaticResource textblockcaption}" />
+                            <Border BorderThickness="1" BorderBrush="White" Margin="15 2 15 0" CornerRadius="5">
+                                <Grid Margin="7 5">
+                                    <TextBlock x:Name="textAge"  Text=" " MouseDown="textAge_MouseDown" VerticalAlignment="Center"
+                                    Style="{StaticResource textHint}"/>
+                                    <TextBox x:Name="txtAge" Text="{Binding Age}" TextChanged="txtAge_TextChanged"  Style="{StaticResource textBox1}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Text="Maths Result" Style="{StaticResource textblockcaption}" />
+                            <Border BorderThickness="1" BorderBrush="White" Margin="15 2 15 0" CornerRadius="5">
+                                <Grid Margin="7 5">
+                                    <TextBlock x:Name="textSubject1"  Text="Result" MouseDown="textSubject1_MouseDown" VerticalAlignment="Center"
+                                    Style="{StaticResource textHint}"/>
+                                    <TextBox x:Name="txtSubject1" Text="{Binding Subject1}" TextChanged="txtSubject1_TextChanged"  Style="{StaticResource textBox1}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Text="Science Result" Style="{StaticResource textblockcaption}" />
+                            <Border BorderThickness="1" BorderBrush="White" Margin="15 2 15 0" CornerRadius="5">
+                                <Grid Margin="7 5">
+                                    <TextBlock x:Name="textSubject2"  Text="Result" MouseDown="textSubject2_MouseDown" VerticalAlignment="Center"
+                                    Style="{StaticResource textHint}"/>
+                                    <TextBox x:Name="txtSubject2" Text="{Binding Subject2}" TextChanged="txtSubject2_TextChanged"  Style="{StaticResource textBox1}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Text="English Result" Style="{StaticResource textblockcaption}" />
+                            <Border BorderThickness="1" BorderBrush="White" Margin="15 2 15 0" CornerRadius="5">
+                                <Grid Margin="7 5">
+                                    <TextBlock x:Name="textSubject3"  Text="Result" MouseDown="textSubject3_MouseDown" VerticalAlignment="Center"
+                                    Style="{StaticResource textHint}"/>
+                                    <TextBox x:Name="txtSubject3" Text="{Binding Subject3}" TextChanged="txtSubject3_TextChanged"  Style="{StaticResource textBox1}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Text="History Result" Style="{StaticResource textblockcaption}" />
+                            <Border BorderThickness="1" BorderBrush="White" Margin="15 2 15 0" CornerRadius="5">
+                                <Grid Margin="7 5">
+                                    <TextBlock x:Name="textSubject4"  Text="Result" MouseDown="textSubject4_MouseDown" VerticalAlignment="Center"
+                                    Style="{StaticResource textHint}"/>
+                                    <TextBox x:Name="txtSubject4" Text="{Binding Subject4}" TextChanged="txtSubject4_TextChanged"  Style="{StaticResource textBox1}"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                        <Button Content="Save" Style="{StaticResource mainButton}" Command="{Binding SaveCommand}"/>
+
+                    </StackPanel>
+                </Grid>
+               
+                
+
+
+            </StackPanel>
+
+        </Border>
+
+    </Grid>
+</Window>
